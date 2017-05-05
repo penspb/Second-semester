@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "№1.5", "№1.5\№1.5.csproj", "{8FE52F16-6091-48E6-AE8B-B0EA60F1D35B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test for 1.5", "Test for 1.5\Test for 1.5.csproj", "{C73B93C6-03EA-41D0-BF20-DF37A2B1D499}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForSolutionOnePointFive", "Test for 1.5\TestForSolutionOnePointFive.csproj", "{C73B93C6-03EA-41D0-BF20-DF37A2B1D499}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
