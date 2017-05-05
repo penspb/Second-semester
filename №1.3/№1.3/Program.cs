@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace _1._3
 {
+    /// <summary>
+    /// Project implementation. Including bubble sort and conversation with user
+    /// </summary>
     public class Program
     {
-
+        /// <summary>
+        /// Realization of bubble sort
+        /// </summary>
         public static void BubbleSort(int[] array)
         {
-
             for (int i = 0; i < array.Length; i++)
             {
                 for (int j = 0; j < array.Length - i - 1; j++)
@@ -24,16 +28,14 @@ namespace _1._3
                     }
                 }
             }
-
         }
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
 
             Console.WriteLine("Good day! Please enter the size of array:");
 
-            int size = 0;
-            size = Convert.ToInt32(Console.ReadLine());
+            int size = Convert.ToInt32(Console.ReadLine());
             int[] array = new int[size];
 
             Console.WriteLine("Fine! Please enter the array:");
@@ -49,9 +51,6 @@ namespace _1._3
             {
                 Console.Write(array[i] + " ");
             }
-
         }
-
     }
-
 }

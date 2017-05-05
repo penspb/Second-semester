@@ -7,7 +7,6 @@ namespace TestForSolutionOnePointThree
     [TestClass]
     public class TestForOnePointThree
     {
-
         [TestMethod]
         public void TestSort0()
         {
