@@ -15,7 +15,7 @@ namespace TestForSolutionOnePointFour
             int[,] firstArray = { { 1, 2 }, { 3, 4 } };
             int[] lastArray = new int[number * number];
 
-            Program.SpiralLine(firstArray, lastArray);
+            Program.SpiralLine(firstArray);
         }
 
         [TestMethod]
@@ -25,7 +25,7 @@ namespace TestForSolutionOnePointFour
             int[,] firstArray = { { 5 } };
             int[] lastArray = new int[number * number];
 
-            Program.SpiralLine(firstArray, lastArray);
+            lastArray = Program.SpiralLine(firstArray);
 
             Assert.AreEqual(5, lastArray[0]);
         }
@@ -37,7 +37,7 @@ namespace TestForSolutionOnePointFour
             int[,] firstArray = { { 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 10 }, { 11, 12, 13, 14, 15 }, { 16, 17, 18, 19, 20 }, { 21, 22, 23, 24, 25 } };
             int[] lastArray = new int[number * number];
 
-            Program.SpiralLine(firstArray, lastArray);
+            lastArray = Program.SpiralLine(firstArray);
 
             Assert.AreEqual(3, lastArray[10]);
         }

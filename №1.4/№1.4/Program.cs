@@ -14,13 +14,14 @@ namespace _1._4
         /// <summary>
         /// Transformation from two-dimensional array to dimensional
         /// </summary>
-        public static void SpiralLine(int[,] firstArray, int[] lastArray)
+        public static int[] SpiralLine(int[,] firstArray)
         {
             if (firstArray.GetLength(0) % 2 == 0)
             {
-                throw new EvenNumberException("Error. The number is even");
+                throw new EvenNumberException("Error. The number " + firstArray.GetLength(0) +" is even");
             }
 
+            int[] lastArray = new int[firstArray.GetLength(0) * firstArray.GetLength(0)];
             int ending = firstArray.GetLength(0) / 2 - 1;
             int iLast = 1;
             int squareSize = 3;
@@ -56,6 +57,8 @@ namespace _1._4
                 ending--;
                 squareSize = squareSize + 2;
             }
+
+            return lastArray;
         }
 
         /// <summary>
@@ -85,7 +88,7 @@ namespace _1._4
                 }
             }
 
-            SpiralLine(firstArray, lastArray);
+            lastArray = SpiralLine(firstArray);
             Print(lastArray);
         }
     }
