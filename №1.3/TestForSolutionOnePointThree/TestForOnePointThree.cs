@@ -2,16 +2,16 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using _1._3;
 
-namespace Test_for_solution__1._3
+namespace TestForSolutionOnePointThree
 {
     [TestClass]
-    public class UnitTest1
+    public class TestForOnePointThree
     {
 
         [TestMethod]
         public void TestSort0()
         {
-            int[] array = { 1, 10, -1, 4, -4, 6};
+            int[] array = { 1, 10, -1, 4, -4, 6 };
             Program.BubbleSort(array);
 
             bool check = true;
@@ -30,7 +30,7 @@ namespace Test_for_solution__1._3
         [TestMethod]
         public void TestSort1()
         {
-            int[] array = { 5, 4, 3, 2, 1, 0, -1, 6};
+            int[] array = { 5, 4, 3, 2, 1, 0, -1, 6 };
 
             Program.BubbleSort(array);
 
@@ -56,5 +56,13 @@ namespace Test_for_solution__1._3
             Assert.IsTrue(check);
         }
 
+        [TestMethod]
+        public void TestSort4()
+        {
+            int[] array = { 1 };
+            Program.BubbleSort(array);
+
+            Assert.AreEqual(1, array[0]);
+        }
     }
 }
