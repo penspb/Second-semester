@@ -10,8 +10,10 @@ namespace _1._1
         /// <returns>Factorial of number</returns>
         public static int Factorial(int number)
         {
+            
             if (number < 0)
             {
+                
                 throw new PushException("Error. The number is negative");
             }
 
@@ -21,13 +23,18 @@ namespace _1._1
             }
 
             return number * Factorial(number - 1);
+
         }
 
         static void Main(string[] args)
         {
+
             Console.WriteLine("Good day! Please enter the number:");
             int newNumber = int.Parse(Console.ReadLine());
             Console.WriteLine(Factorial(newNumber));
+
         }
+
     }
+
 }

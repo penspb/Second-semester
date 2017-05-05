@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0DBF91B4-6F84-47FB-A99C-5BC11A9F1172}</ProjectGuid>
+    <ProjectGuid>{D664F90F-7831-4390-852F-171A0F5A4D5A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Test_for_solution1._1</RootNamespace>
-    <AssemblyName>Test for solution1.1</AssemblyName>
+    <RootNamespace>TestForSolutionOnePointOne</RootNamespace>
+    <AssemblyName>TestForSolutionOnePointOne</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

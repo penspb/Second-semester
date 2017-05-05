@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace _1._1
 {
-
+    /// <summary>
+    /// Exception, if input data are negative
+    /// </summary>
     [Serializable]
     public class PushException : Exception
     {
