@@ -2,6 +2,9 @@
 
 namespace _1._2
 {
+    /// <summary>
+    /// Program with realization of fibonacci and conversation with user
+    /// </summary>
     public class Program
     {
 
@@ -13,7 +16,7 @@ namespace _1._2
         {
             if (number < 0)
             {
-                throw new PushException("Error. The number is negative");
+                throw new NegativeReferenceException("Error. The number is negative");
             }
 
             if ((number == 0) || (number == 1))

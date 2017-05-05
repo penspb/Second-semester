@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется посредством следующего 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Test for solution 1.2")]
+[assembly: AssemblyTitle("TestForSolutionOnePointTwo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Test for solution 1.2")]
+[assembly: AssemblyProduct("TestForSolutionOnePointTwo")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Если данный проект доступен для модели COM, следующий GUID используется в качестве идентификатора библиотеки типов
-[assembly: Guid("ce096ea9-2a21-4045-bbc2-076f21957db0")]
+[assembly: Guid("b6247330-96c4-4411-820d-ff6fcb22e8ef")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //

@@ -2,10 +2,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using _1._2;
 
-namespace Test_for_solution_1._2
+namespace TestForSolutionOnePointTwo
 {
     [TestClass]
-    public class UnitTest1
+    public class TestForOnePoinTwo
     {
         [TestMethod]
         public void CheckingResult0()
@@ -29,6 +29,13 @@ namespace Test_for_solution_1._2
         public void CheckingResult3()
         {
             Assert.AreEqual(Program.Fibonacci(5), 8);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(NegativeReferenceException))]
+        public void CheckingException()
+        {
+            Program.Fibonacci(-2);
         }
     }
 }
