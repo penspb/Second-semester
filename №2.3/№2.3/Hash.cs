@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _2._3
 {
@@ -17,20 +14,20 @@ namespace _2._3
         /// <summary>
         /// hash table
         /// </summary>
-        public List[] table { get; set; }
+        List[] Table { get; set; }
 
         /// <summary>
-        /// describe of hash table
+        /// constructor of hash table
         /// </summary>
         public Hash(IHashFunction function)
         {
             this.function = function;
 
-            table = new List[sizeOfTable];
+            Table = new List[sizeOfTable];
 
             for (int i = 0; i < sizeOfTable; i++)
             {
-                table[i] = new List();
+                Table[i] = new List();
             }
         }
 
@@ -40,7 +37,7 @@ namespace _2._3
         /// <param name="value">sample</param>
         public void Add(string workingString)
         {
-            table[function.Function(workingString)].Add(0, workingString);
+            Table[function.Function(workingString) % sizeOfTable].Add(0, workingString);
         }
 
         /// <summary>
@@ -48,12 +45,12 @@ namespace _2._3
         /// </summary>
         public void Delete(string workingString)
         {
-            if (!table[function.Function(workingString)].IsThereValue(workingString))
+            if (!Table[function.Function(workingString) % sizeOfTable].IsThereValue(workingString))
             {
-                throw new ExceptionNonexistentPosition("Value is not found");
+                throw new NonexistentPositionException("Value is not found");
             }
 
-            table[function.Function(workingString)].Delete(table[function.Function(workingString)].FindPosition(workingString));
+            Table[function.Function(workingString) % sizeOfTable].Delete(Table[function.Function(workingString)].FindPosition(workingString));
         }
 
         /// <summary>
@@ -61,7 +58,7 @@ namespace _2._3
         /// </summary>
         public bool AreYouHere(string workingString)
         {
-            return (table[function.Function(workingString)].IsThereValue(workingString));
+            return (Table[function.Function(workingString) % sizeOfTable].IsThereValue(workingString));
         }
     } 
 }

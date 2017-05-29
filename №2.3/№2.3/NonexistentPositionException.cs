@@ -10,12 +10,12 @@ namespace _2._3
     /// Exception: appeal to nonexistent position of list
     /// </summary>
     [Serializable]
-    public class ExceptionNonexistentValue : Exception
+    public class NonexistentPositionException : Exception
     {
-        public ExceptionNonexistentValue() { }
-        public ExceptionNonexistentValue(string message) : base(message) { }
-        public ExceptionNonexistentValue(string message, Exception inner) : base(message, inner) { }
-        protected ExceptionNonexistentValue(
+        public NonexistentPositionException() { }
+        public NonexistentPositionException(string message) : base(message) { }
+        public NonexistentPositionException(string message, Exception inner) : base(message, inner) { }
+        protected NonexistentPositionException(
           System.Runtime.Serialization.SerializationInfo info,
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }

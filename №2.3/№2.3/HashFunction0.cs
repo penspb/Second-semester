@@ -12,11 +12,6 @@ namespace _2._3
     public class HashFunction0 : IHashFunction
     {
         /// <summary>
-        /// size of table
-        /// </summary>
-        private const int sizeOfTable = 63;
-
-        /// <summary>
         /// hash-function
         /// </summary>
         /// <param name="workingString">value</param>
@@ -29,7 +24,7 @@ namespace _2._3
                 result = result + workingString[i] * i;
             }
 
-            return Math.Abs(result % sizeOfTable);
+            return Math.Abs(result);
         }
     }
 }

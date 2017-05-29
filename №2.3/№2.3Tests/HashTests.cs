@@ -19,14 +19,14 @@ namespace _2._3.Tests
         }
         
         [TestMethod]
-        public void HashTest0()
+        public void HashTest0AddAndAreYouHere()
         {
             hash.Add("I am Iron Man");
             Assert.IsTrue(hash.AreYouHere("I am Iron Man"));
         }
 
         [TestMethod]
-        public void HashTest1()
+        public void HashTest1AreYouHereShouldReturnTrueForTwoAddedString()
         {
             hash.Add("Tu-u ru-u, tu ru ru. Tu-ru-tu-ru-tu-ru tu ru ru");
             hash.Add("Tu-u ru-u, tu ru ru. Tu-ru-tu-ru-tu-ru tu ru ru");
@@ -36,7 +36,7 @@ namespace _2._3.Tests
         }
 
         [TestMethod]
-        public void HashTest3()
+        public void HashTest3AreYouHereShouldReturnFalseForNotAddedString()
         {
             hash.Add("Can he see or his mind?");
             hash.Add("Can he walk at all");
@@ -45,7 +45,7 @@ namespace _2._3.Tests
         }
 
         [TestMethod]
-        public void HashTest4()
+        public void HashTest4DeleteShouldDeleteAddedStringsAndAreYouHereShoudlNotFindDeletedString()
         {
             hash.Add("Has he thoughts within his head");
             hash.Add("We'll just pass him there");
