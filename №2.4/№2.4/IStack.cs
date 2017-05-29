@@ -2,6 +2,9 @@
 
 namespace _2._4
 {
+    /// <summary>
+    /// inteface of stack
+    /// </summary>
     public interface IStack
     {
         /// <summary>

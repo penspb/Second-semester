@@ -2,6 +2,9 @@
 
 namespace _2._4
 {
+    /// <summary>
+    /// stack based on array
+    /// </summary>
     public class ArrayStack : IStack
     {
         /// <summary>
@@ -27,7 +30,7 @@ namespace _2._4
         {
             if (length + 1 >= maxLength)
             {
-                throw new ExceptionStackOverFlow("Stack overflow");
+                throw new StackOverFlowException("Stack overflow");
             }
 
             workingArray[length] = value;
@@ -42,7 +45,7 @@ namespace _2._4
         {
             if (length <= 0)
             {
-                throw new ExceptionStackIsEmpty("Stack is empty. There is nothing to look for.");
+                throw new StackIsEmptyException("Stack is empty. There is nothing to look for.");
             }
 
             length--;
@@ -52,9 +55,6 @@ namespace _2._4
         /// <summary>
         /// Checking emptiness of the list
         /// </summary>
-        public bool IsEmpty()
-        {
-            return (length == 0);
-        }
+        public bool IsEmpty => length == 0;
     }
 }

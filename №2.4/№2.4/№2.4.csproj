@@ -44,8 +44,8 @@
   <ItemGroup>
     <Compile Include="ArrayStack.cs" />
     <Compile Include="Calculator.cs" />
-    <Compile Include="ExceptionStackIsEmpty.cs" />
-    <Compile Include="ExceptionStackOverFlow.cs" />
+    <Compile Include="StackIsEmptyException.cs" />
+    <Compile Include="StackOverFlowException.cs" />
     <Compile Include="IStack.cs" />
     <Compile Include="ListStack.cs" />
     <Compile Include="Program.cs" />

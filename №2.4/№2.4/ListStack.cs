@@ -42,7 +42,7 @@ namespace _2._4
         {
             if (IsEmpty())
             {
-                throw new ExceptionStackIsEmpty("Stack is empty. There is nothing to look for.");
+                throw new StackIsEmptyException("Stack is empty. There is nothing to look for.");
             }
 
             int valueFromHead = head.Value;

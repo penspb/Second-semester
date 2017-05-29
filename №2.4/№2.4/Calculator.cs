@@ -2,6 +2,10 @@
 
 namespace _2._4
 {
+    /// <summary>
+    /// stack calculator
+    /// he is interesting only in integer number
+    /// </summary>
     public class Calculator
     {
         private IStack stack;
@@ -18,7 +22,7 @@ namespace _2._4
         /// analisis of operator
         /// </summary>
         /// <param name="workingOperator">symbol</param>
-        public void Operate(char workingOperator)
+        private void Operate(char workingOperator)
         {
             int value1 = stack.Pop();
             int value0 = stack.Pop();
@@ -62,7 +66,7 @@ namespace _2._4
         public int Result(string workingString)
         {
             int number = 0;
-            bool check = false;
+            bool checkTheEnd = false;
             int i = 0;
             while (i < workingString.Length)
             {
@@ -81,14 +85,14 @@ namespace _2._4
                             i++;
                         }
 
-                        check = true;
+                        checkTheEnd = true;
                     }
                     else
                     {
-                        if (check)
+                        if (checkTheEnd)
                         {
                             stack.Push(number);
-                            check = false;
+                            checkTheEnd = false;
                             number = 0;
                         }
 
