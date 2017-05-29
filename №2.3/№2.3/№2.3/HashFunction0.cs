@@ -24,7 +24,7 @@ namespace _2._3
                 result = result + workingString[i] * i;
             }
 
-            return Math.Abs(result);
+            return result;
         }
     }
 }
