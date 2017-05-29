@@ -38,7 +38,7 @@ namespace _2._3
         /// <summary>
         /// Length of list
         /// </summary>
-        public int Length { get; set; }
+        public int Length { get; private set; }
 
         /// <summary>
         /// Add new element
@@ -49,7 +49,7 @@ namespace _2._3
         {
             if ((position > Length) || (position < 0))
             {
-                throw new ExceptionNonexistentPosition("There isn't this position");
+                throw new NonexistentPositionException("There isn't this position");
             }
 
             if (position == 0)
@@ -85,12 +85,12 @@ namespace _2._3
         {
             if (head == null)
             {
-                throw new ExceptionListIsEmpty("List is empty");
+                throw new ListIsEmptyException("List is empty");
             }
 
             if ((position > Length - 1) || (position < 0))
             {
-                throw new ExceptionNonexistentPosition("There isn't this position");
+                throw new NonexistentPositionException("There isn't this position");
             }
 
             string value;
@@ -127,12 +127,12 @@ namespace _2._3
         {
             if (head == null)
             {
-                throw new ExceptionListIsEmpty("List is empty");
+                throw new ListIsEmptyException("List is empty");
             }
 
             if ((position > Length) || (position < 0))
             {
-                throw new ExceptionNonexistentPosition("There isn't this position");
+                throw new NonexistentPositionException("There isn't this position");
             }
 
             ListElement zero = head;
@@ -150,10 +150,7 @@ namespace _2._3
         /// <summary>
         /// Is list empty?
         /// </summary>
-        public bool IsEmpty()
-        {
-            return (head == null);
-        }
+        public bool IsEmpty() => head == null;
 
         /// <summary>
         /// check: is there value in list
@@ -182,12 +179,12 @@ namespace _2._3
         {
             if (head == null)
             {
-                throw new ExceptionListIsEmpty("List is empty");
+                throw new ListIsEmptyException("List is empty");
             }
 
             if (!IsThereValue(value))
             {
-                throw new ExceptionNonexistentValue("Value is not found");
+                throw new NonexistentValueException("Value is not found");
             }
 
             int position = 0;

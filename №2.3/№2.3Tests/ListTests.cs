@@ -68,21 +68,21 @@ namespace TestForList
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ExceptionListIsEmpty))]
+        [ExpectedException(typeof(ListIsEmptyException))]
         public void TestException0()
         {
             list.Get(6);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ExceptionListIsEmpty))]
+        [ExpectedException(typeof(ListIsEmptyException))]
         public void TestException1()
         {
             list.Delete(0);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ExceptionNonexistentPosition))]
+        [ExpectedException(typeof(NonexistentPositionException))]
         public void TestException2()
         {
             list.Add(0, "What did you see there?");
@@ -90,7 +90,7 @@ namespace TestForList
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ExceptionNonexistentPosition))]
+        [ExpectedException(typeof(NonexistentPositionException))]
         public void TestException3()
         {
             list.Add(0, "There's devil waiting outside your door");
@@ -98,7 +98,7 @@ namespace TestForList
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ExceptionNonexistentPosition))]
+        [ExpectedException(typeof(NonexistentPositionException))]
         public void TestException4()
         {
             list.Add(-12, "I'm walking thriugh deep water");

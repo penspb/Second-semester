@@ -15,26 +15,27 @@ namespace _2._3
         /// <summary>
         /// hash table
         /// </summary>
-        public List[] table { get; set; }
+        private List[] Table { get; set; }
 
         /// <summary>
-        /// describe of hash table
+        /// constructer of hash table
         /// </summary>
         public Hash()
         {
-            table = new List[sizeOfTable];
+            Table = new List[sizeOfTable];
 
             for (int i = 0; i < sizeOfTable; i++)
             {
-                table[i] = new List();
+                Table[i] = new List();
             }
         }
 
         /// <summary>
-        /// hash funcion
+        /// hash function
         /// </summary>
-        /// <returns>result of function</returns>
-        public int Function(string workingString)
+        /// <param name="workingString">string</param>
+        /// <returns>result of calculations</returns>
+        private int Function(string workingString)
         {
             int result = 0;
             for (int i = 0; i < workingString.Length; i++)
@@ -51,7 +52,7 @@ namespace _2._3
         /// <param name="value">sample</param>
         public void Add(string workingString)
         {
-            table[Function(workingString)].Add(0, workingString);
+            Table[Function(workingString)].Add(0, workingString);
         }
 
         /// <summary>
@@ -59,12 +60,12 @@ namespace _2._3
         /// </summary>
         public void Delete(string workingString)
         {
-            if (!table[Function(workingString)].IsThereValue(workingString))
+            if (!Table[Function(workingString)].IsThereValue(workingString))
             {
-                throw new ExceptionNonexistentPosition("Value is not found");
+                throw new NonexistentPositionException("Value is not found");
             }
 
-            table[Function(workingString)].Delete(table[Function(workingString)].FindPosition(workingString));
+            Table[Function(workingString)].Delete(Table[Function(workingString)].FindPosition(workingString));
         }
 
         /// <summary>
@@ -72,7 +73,7 @@ namespace _2._3
         /// </summary>
         public bool AreYouHere(string workingString)
         {
-            return (table[Function(workingString)].IsThereValue(workingString));
+            return (Table[Function(workingString)].IsThereValue(workingString));
         }
     } 
 }
