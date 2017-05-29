@@ -66,7 +66,7 @@ namespace _2._4
         public int Result(string workingString)
         {
             int number = 0;
-            bool checkTheEnd = false;
+            bool isEnd = false;
             int i = 0;
             while (i < workingString.Length)
             {
@@ -85,14 +85,14 @@ namespace _2._4
                             i++;
                         }
 
-                        checkTheEnd = true;
+                        isEnd = true;
                     }
                     else
                     {
-                        if (checkTheEnd)
+                        if (isEnd)
                         {
                             stack.Push(number);
-                            checkTheEnd = false;
+                            isEnd = false;
                             number = 0;
                         }
 

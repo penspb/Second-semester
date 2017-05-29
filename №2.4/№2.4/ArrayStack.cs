@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace _2._4
 {
     /// <summary>
@@ -16,7 +17,7 @@ namespace _2._4
         /// real length of array
         /// </summary>
         private int length = 0;
-        
+
         /// <summary>
         /// working array
         /// </summary>
@@ -55,6 +56,6 @@ namespace _2._4
         /// <summary>
         /// Checking emptiness of the list
         /// </summary>
-        public bool IsEmpty => length == 0;
+        public bool IsEmpty() => length == 0;
     }
 }

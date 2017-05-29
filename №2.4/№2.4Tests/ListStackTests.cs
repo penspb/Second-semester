@@ -59,7 +59,7 @@ namespace _2._4.Tests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ExceptionStackIsEmpty))]
+        [ExpectedException(typeof(StackIsEmptyException))]
         public void TestForException()
         {
             stack.Pop();
